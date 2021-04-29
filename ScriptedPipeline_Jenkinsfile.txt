@@ -20,14 +20,16 @@ node('master')
   stage('ContinuousDelivery') 
   {
       input message: 'Waiting for approval from DM', submitter: 'Srinivas'
-    sh 'scp /var/lib/jenkins/workspace/Pipeline/webapp/target/webapp.war vagrant@10.10.10.33:/var/lib/tomcat7/webapps/prodenv.war'
+    sh 'scp /var/lib/jenkins/workspace/Pipeline/webapp/target/webapp.war vagrant@10.10.10.33:/var/lib/tomcat7/webapps/prodcsdcsdenv.war'
   }
   
   
   
   
   
+
   
   
   
 }
+
