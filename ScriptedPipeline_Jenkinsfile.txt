@@ -8,7 +8,9 @@ node('master')
   {
     sh 'mvn package'
   } 
-  stage('ContinuousDeployment') 
+  stage('ContinuousDeployment')
+
+
   {
     sh 'scp /var/lib/jenkins/workspace/Pipeline/webapp/target/webapp.war vagrant@10.10.10.32:/var/lib/tomcat7/webapps/qaenv.war'
   }
